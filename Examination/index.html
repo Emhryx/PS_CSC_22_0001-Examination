@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My dream House</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+  <a-scene
+    renderer="antialias: true; colorManagement: true; sortObjects: true; precision: medium; shadowMapSize: 1024"
+    shadow="type: pcf"
+    fog="type: exponential; color: #4a4c4e; density: 0.01"
+    background="color: #cfe9ff">
+
+    <a-assets timeout="10000">
+      <a-asset-item id="houseModel" src="model/Apartment 2.glb"></a-asset-item>
+       <a-asset-item id="windowModel" src="model/Window.glb"></a-asset-item>
+       <a-asset-item id="roofModel" src="model/Roof Flat Corner Inn.glb"></a-asset-item>
+       <a-asset-item id="bedModel" src="model/Bed.glb"></a-asset-item>
+        <a-asset-item id="showerModel" src="model/Shower.glb"></a-asset-item>
+         <a-asset-item id="wallCornerModel" src="model/Wall Corner.glb"></a-asset-item>
+         <a-asset-item id="doorModel" src="model/door.glb"></a-asset-item>
+         <a-asset-item id="rugModel" src="model/Modern rug.glb"></a-asset-item>
+         <a-asset-item id="wallDoorwayModel" src="model/Wall Doorway Round.glb"></a-asset-item>
+          <a-asset-item id="kitchenWindowModel" src="model/kitchen Window.glb"></a-asset-item>
+           <a-asset-item id="pillarModel" src="model/Pillar.glb"></a-asset-item>
+           <a-asset-item id="carModel" src="model/CAR Model.glb"></a-asset-item>
+            <a-asset-item id="dogModel" src="model/dog.glb"></a-asset-item>
+             <a-asset-item id="fenceModel" src="model/Fence.glb"></a-asset-item>
+              <a-asset-item id="gateModel" src="model/Gate.glb"></a-asset-item>
+               <a-asset-item id="poolModel" src="model/Public Pool.glb"></a-asset-item>
+              <a-asset-item id="rockPathModel" src="model/Rock Path Round Wide.glb"></a-asset-item>
+              <a-asset-item id="daffodilModel" src="model/Daffodil.glb"></a-asset-item>
+               <a-asset-item id="daffodilModel2" src="model/Flowery Terrarium.glb"></a-asset-item>
+                <a-asset-item id="daffodilModel3" src="model/Grass Patch.glb"></a-asset-item>
+                 <a-asset-item id="streetlightModel" src="model/Lantern.glb"></a-asset-item>
+                <a-asset-item id="ceilingModel" src="model/Ceiling Light.glb"></a-asset-item>
+                 <a-asset-item id="cloudModel" src="model/Clouds.glb"></a-asset-item>
+                <a-asset-item id="sunModel" src="model/Sun.glb"></a-asset-item>
+                 <a-asset-item id="roadModel" src="model/Road Piece Straight.glb"></a-asset-item>
+                 <a-asset-item id="treeModel" src="model/Big Tree.glb"></a-asset-item>
+                  <a-asset-item id="ironroofModel" src="model/ironroof.glb"></a-asset-item>
+                   <a-asset-item id="sceneModel" src="model/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-sky color="#cfe9ff"></a-sky>
+
+    <a-light type="hemisphere" color="#cae1ff" groundColor="#3a7d44" intensity="0.6"></a-light>
+    <a-light
+      type="directional"
+      position="10 20 10"
+      color="#fff5d1"
+      intensity="1.2"
+      castShadow="true"
+      shadow-camera-left="-30"
+      shadow-camera-right="30"
+      shadow-camera-top="30"
+      shadow-camera-bottom="-30">
+    </a-light>
+
+    <a-entity
+      gltf-model="#houseModel"
+      position="0 0 0"
+      scale="6 6 6"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+      <a-light type="point" color="#ffaa77" intensity="2" distance="12" decay="2" position="0 2 0"></a-light>
+      <a-light type="point" color="#ffaa77" intensity="1.5" distance="10" decay="2" position="-3 2 1"></a-light>
+      <a-light type="point" color="#ffaa77" intensity="1.5" distance="10" decay="2" position="3 2 1"></a-light>
+      <a-light type="point" color="#ffaa77" intensity="2" distance="12" decay="2" position="0 6 0"></a-light>
+    </a-entity>
+    <a-entity
+      gltf-model="#bedModel"
+      position="3.5 0 4.75"
+      scale="0.6 0.6 0.6"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#pillarModel"
+      position="7.2 -0.8 5.39"
+      scale="0.7 0.8 0.7"
+      rotation="0 0 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#wallDoorwayModel"
+      position="0.3 -0.8 1.38"
+      scale="0.6 0.9 2.50"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#kitchenWindowModel"
+      position="0.4 0.6 2.81"
+      scale="8 7.5 6"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+      <a-entity
+        gltf-model="#rugModel"
+        position="-2.9 -0.8 3.1"
+        scale="1.5 2.4 1"
+        rotation="0 180 0"
+        shadow="cast: true; receive: true">
+         </a-entity>
+     <a-entity
+      gltf-model="#showerModel"
+      position="5.4 0.39 5.0"
+      scale="0.9 1 0.4"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+       </a-entity>
+        <a-entity
+      gltf-model="#carModel"
+      position="9 -0.8 4"
+      scale="0.01 0.01 0.01"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#poolModel"
+      position="6.5 -0.5 -1.2"
+      scale="0.41 0.21 0.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#sceneModel"
+      position="6.5 0.1 -1.2"
+      scale="0.11 0.18 0.11"
+       animation-mixer="clip: walk; loop: repeat"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="8.5 -0.9 9.2"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="6.6 -0.9 9.2"
+      scale="1 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#rockPathModel"
+      position="4.6 -0.9 7"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#rockPathModel"
+      position="1.6 -0.9 7"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="8.4 -0.9 6.7"
+      scale="2.51 1.21 1.21"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+      </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="1.8 -0.9 8.7"
+      scale="2.51 1.21 0.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#rockPathModel"
+      position="7 -0.9 -4.5"
+      scale="1.71 1.21 2.91"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#daffodilModel"
+      position="10.3 -0.63 8.4"
+      scale="0.01 0.02 0.01"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#ceilingModel"
+      position="-1.9 1.5 4.7"
+      scale="1.01 0.88 1.01"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="3.9 7.5 0.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="-1.9 7.5 0.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="2.9 6.5 2.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="-1.9 7.5 0.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="6.9 7.5 1.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#sunModel"
+      position="-1.9 9.5 0.1"
+      scale="1.01 0.88 1.01"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="9.9 7.5 2.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="8.9 7.5 4.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#cloudModel"
+      position="-1.9 7.5 4.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="0.9 7.5 4.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="3.9 7.5 4.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#cloudModel"
+      position="-3.9 7.5 2.7"
+      scale="3.01 1.88 3.01"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#daffodilModel3"
+      position="0.3 -0.63 10"
+      scale="0.41 1.02 1.41"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#daffodilModel3"
+      position="-2.9 -0.63 10"
+      scale="0.41 1.02 1.41"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#streetlightModel"
+      position="2.0 1.23 9.7"
+      scale="1.21 2.02 1.61"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#treeModel"
+      position="-7.5.0 1.43 4.7"
+      scale="1.21 2.02 1.61"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#treeModel"
+      position="-7.5.0 1.43 7.7"
+      scale="1.21 2.02 1.61"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#treeModel"
+      position="12.5.0 1.43 8.7"
+      scale="1.21 2.02 1.61"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#treeModel"
+      position="12.5.0 1.43 4.7"
+      scale="1.21 2.02 1.61"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#roadModel"
+      position="-4.0 -1.31 12.0"
+      scale="0.05 0.05 0.05"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#roadModel"
+      position="14.0 -1.31 12.0"
+      scale="0.05 0.05 0.05"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#roadModel"
+      position="5.0 -1.31 12.0"
+      scale="0.05 0.05 0.05"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#daffodilModel"
+      position="10.3 -0.83 -5"
+      scale="0.01 0.02 0.01"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#daffodilModel2"
+      position="-1.3 -0.35 4"
+      scale="1.01 1.02 1.01"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="9.8 -0.9 -1.5"
+      scale="1.21 1.21 2.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="8.3 -0.9 1.7"
+      scale="2.51 1.21 0.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="8.3 -0.9 3.3"
+      scale="2.51 1.21 0.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="8.3 -0.9 4.7"
+      scale="2.51 1.21 0.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="-2.8 -0.9 8.7"
+      scale="2.51 1.21 0.81"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="-4 -0.9 7"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#rockPathModel"
+      position="-1.3 -0.9 7"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#rockPathModel"
+      position="0.1 -0.9 7"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#rockPathModel"
+      position="4.2 -0.9 9.2"
+      scale="1.51 1.21 1.31"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+      <a-entity
+        gltf-model="#dogModel"
+        position="0.5 -0.7 7"
+        scale="0.3 0.3 0.3"
+         animation-mixer="clip: Attack; loop: repeat"
+        rotation="0 360 0"
+        shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="11 -0.8 4"
+      scale="3 1 0.5"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="-5.5 -0.8 0.1"
+      scale="3 1 0.5"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="-5.5 -0.8 4"
+      scale="3 1 0.5"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="11 -0.8 0.1"
+      scale="3 1 0.5"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="-1.7 -0.8 9.5"
+      scale="2 1 0.5"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+      </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="0.1 -0.8 -6"
+      scale="3 1 0.5"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#gateModel"
+      position="6.5 -0.8 9.3"
+      scale="0.4 0.5 1.2"
+      rotation="0 270 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+         <a-entity
+      gltf-model="#fenceModel"
+      position="5 -0.8 -6"
+      scale="3 1 0.5"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+        </a-entity>
+     <a-entity
+      gltf-model="#wallCornerModel"
+      position="5.5 -0.7 3.5"
+      scale="2.2 0.95 0.6"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#doorModel"
+      position="5.06 0 2.1"
+      scale="0.44 0.35 0.1"
+      rotation="0 90 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#doorModel"
+      position="-2.7 0.3 2.9"
+      scale="0.4 0.35 0.1"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+     <a-entity
+      gltf-model="#roofModel"
+      position="1.3 1.5 1"
+      scale="7 3.8 7"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 2 0"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="-3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 6 0"></a-light>
+    </a-entity>
+    <a-entity
+      gltf-model="#ironroofModel"
+      position="1.3 0.26 0.4"
+      scale="0.6 0.3 0.5"
+      rotation="0 360 0"
+      shadow="cast: true; receive: true">
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 2 0"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="-3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 6 0"></a-light>
+    </a-entity>
+ <a-entity
+      gltf-model="#windowModel"
+      position="1.16 0.5 5.75"
+      scale="0.3 0.3 0.34"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+    </a-entity>
+    <a-entity
+      gltf-model="#windowModel"
+      position="4.16 0.5 5.76"
+      scale="0.3 0.3 0.34"
+      rotation="0 180 0"
+      shadow="cast: true; receive: true">
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 2 0"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="-3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="1.5" distance="10" decay="2" position="3 2 1"></a-light>
+      <a-light type="point" color="#ffaa55" intensity="2" distance="12" decay="2" position="0 6 0"></a-light>
+    </a-entity>
+    <a-entity position="0 -0.3 14" wasd-controls="acceleration: 40; fly: true"> 
+      <a-camera look-controls>
+        <a-cursor
+          rayOrigin="mouse"
+          material="color: white; shader: flat"
+          geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015">
+        </a-cursor>
+      </a-camera>
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>
